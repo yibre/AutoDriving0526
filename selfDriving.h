@@ -12,8 +12,17 @@ class selfDriving : public QMainWindow
     Q_OBJECT
 
 public:
-    selfDriving(QWidget *parent = Q_NULLPTR);
-	static selfDriving* getInstance();
+    
+	static selfDriving* getInstance() {
+		if (!MainWindow) {
+			MainWindow = new selfDriving();
+		}
+		return MainWindow;
+	}
+
+protected:
+	selfDriving(QWidget *parent = Q_NULLPTR);
+
 private:
 
 	static bool ProgramOn;

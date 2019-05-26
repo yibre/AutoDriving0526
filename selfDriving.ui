@@ -157,7 +157,7 @@
       <string>Mission0</string>
      </property>
      <property name="autoDefault">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="Btn_mission1">

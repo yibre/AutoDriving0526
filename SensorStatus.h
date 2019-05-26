@@ -1,5 +1,5 @@
 #include "DataContainer.h"
-#include "ComPlatform.h""
+#include "ComPlatform.h"
 #include "selfDriving.h"
 #include "CSerialPort.h"
 

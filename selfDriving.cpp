@@ -7,18 +7,13 @@ selfDriving::selfDriving(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
-	if (!ProgramOn) {
-		MainWindow = this;
-		ProgramOn = true;
-	}
+	MainWindow = getInstance();
 	QObject::connect(ui.Btn_mission0, SIGNAL(clicked()), MainWindow, SLOT(clicked_btn_mission0()));
 }
 
-selfDriving* selfDriving::getInstance() {
-	return MainWindow;
-}
+
 
 void selfDriving::clicked_btn_mission0() {
 	Mission* mission;
-	mission->doMission0();
+	//mission->doMission0();
 }

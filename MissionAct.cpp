@@ -17,7 +17,6 @@ int Mission::DecideMission()
 	dataContainer->setValue_UtoP_AorM(1);
 	// step 1. gps의 mission trigger를 받아와서 k를 판단하는 과정 거치기
 
-
 	return k;
 }
 
