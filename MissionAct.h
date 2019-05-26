@@ -11,21 +11,30 @@ protected:
     int MissionNumber = 0;
 
 public:
-    void automode();
     bool emergencyStop();
-    void SetMission(int k); // k번째 미션으로 넘어감
+    int DecideMission();
+    void setMission(int k);// k번째 미션으로 넘어감
     void doMission0();
     
 };
 
-void Mission::SetMission(int k)
-{
-    // step 1. gps의 mission trigger를 받아와서 k를 판단하는 과정 거치기
 
-    // step 2. k 넘버에 맞게 mission 설정하기
-    MissionNumber = k;
-    if (k == 0) { doMission0; }
-    //if (k == 1) { doMission1; } // etc
+// GPS의 이벤트 트리거를 이용해 각 미션으로 넘어가는 함수
+int Mission::DecideMission() 
+{
+    int k;
+    // step 0. manual mode에서 auto mode로 전환
+    dataContainer->setValue_UtoP_AorM(1); 
+    // step 1. gps의 mission trigger를 받아와서 k를 판단하는 과정 거치기
+    
+
+    return k;
+}
+
+void Mission::setMission(int k)// k번째 미션으로 넘어감
+{
+    if (k == 0) { doMission0(); }
+    // if (k ==1) { doMission1(); } ...etc
 }
 
 bool Mission::emergencyStop() // Lidar의 dangerous region이 가까우면 E-stop
