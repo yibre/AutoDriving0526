@@ -118,7 +118,7 @@
     <property name="title">
      <string>Mission Set</string>
     </property>
-    <widget class="QPushButton" name="pushButton_5">
+    <widget class="QPushButton" name="Btn_mission4">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -128,10 +128,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Mission5</string>
+      <string>Mission4</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="Btn_mission3">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -141,10 +141,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Mission4</string>
+      <string>Mission3</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="Btn_mission0">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -154,10 +154,13 @@
       </rect>
      </property>
      <property name="text">
-      <string>Mission1</string>
+      <string>Mission0</string>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="Btn_mission1">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -167,10 +170,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Mission2</string>
+      <string>Mission1</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="Btn_mission2">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -180,7 +183,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Mission3</string>
+      <string>Mission2</string>
      </property>
     </widget>
    </widget>
@@ -196,7 +199,7 @@
     <property name="title">
      <string>Window Set</string>
     </property>
-    <widget class="QPushButton" name="pushButton_11">
+    <widget class="QPushButton" name="btn_win_lidar">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -209,7 +212,7 @@
       <string>Lidar Map</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_10">
+    <widget class="QPushButton" name="btn_win_gps">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -222,7 +225,7 @@
       <string>GPS map</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_9">
+    <widget class="QPushButton" name="btn_win_camera">
      <property name="geometry">
       <rect>
        <x>30</x>
