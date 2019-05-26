@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
+#include <QTimer>
 #include "ui_selfDriving.h"
 
 class selfDriving : public QMainWindow
