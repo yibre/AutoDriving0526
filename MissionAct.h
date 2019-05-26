@@ -38,7 +38,7 @@ void Mission::doMission0() // 가장 기본 상태일때 주행
     {
         int temp = dataContainer->getValue_camera1_steer;
         dataContainer->setValue_UtoP_list(1, 0, 0, 0, temp, 0);
-        this_thread::sleep_for(100ms);
+
     }
     
 }

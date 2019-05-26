@@ -111,12 +111,15 @@ public:
 	int getValue_platform_status();
 	void setValue_platform_status(int value);
 	void updateValue_platform_status();
+
 	int getValue_lidar_status();
 	void setValue_lidar_status(int value);
 	void updateValue_lidar_status();
+
 	int getValue_camera1_status();
 	void setValue_camera1_status(int value);
-	void updateValue_lidar_status();
+	void updateValue_camera1_status();
+
 	int getValue_gps_status();
 	void setValue_gps_status(int value);
 	void updateValue_gps_status();

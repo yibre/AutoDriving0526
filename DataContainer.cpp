@@ -32,8 +32,6 @@ void DataContainer::setValue_gps_status(int value) { mtx_gps_status.lock(); m_gp
 void DataContainer::updateValue_platform_status() { mtx_platform_status.lock(); m_platform_status < 256 ? m_platform_status++ : 256; mtx_platform_status.unlock(); }
 void DataContainer::updateValue_lidar_status() { mtx_lidar_status.lock(); m_lidar_status < 256 ? m_lidar_status++ : 256; mtx_lidar_status.unlock(); }
 void DataContainer::updateValue_camera1_status() { mtx_camera1_status.lock(); m_camera1_status < 256 ? m_camera1_status++ : 256; mtx_camera1_status.unlock(); }
-void DataContainer::updateValue_camera2_status() { mtx_camera2_status.lock(); m_camera2_status < 256 ? m_camera2_status++ : 256; mtx_camera2_status.unlock(); }
-void DataContainer::updateValue_camera3_status() { mtx_camera3_status.lock(); m_camera3_status < 256 ? m_camera3_status++ : 256; mtx_camera3_status.unlock(); }
 void DataContainer::updateValue_gps_status() { mtx_gps_status.lock(); m_gps_status < 256 ? m_gps_status++ : 256; mtx_gps_status.unlock(); }
 
 
