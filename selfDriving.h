@@ -10,9 +10,13 @@ class selfDriving : public QMainWindow
 
 public:
     selfDriving(QWidget *parent = Q_NULLPTR);
+	static selfDriving* getInstance();
 
 private:
+
+	static selfDriving* MainWindow;
+	static bool ProgramOn;
+
     Ui::selfDrivingClass ui;
 };
 
-extern selfDriving * MainWindow;

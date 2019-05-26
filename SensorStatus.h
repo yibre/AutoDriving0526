@@ -1,13 +1,23 @@
 #include "DataContainer.h"
 #include "ComPlatform.h""
+#include "selfDriving.h"
+#include "CSerialPort.h"
 
 #include <thread>
 #include <QTimer>
+#include <iostream>
+#include <thread>
+#include <vector>
+#include <iterator>
+#include <math.h>
 
 class SensorStatus {
+
 private:
+	SensorStatus();
 
 	DataContainer *dataContainer;
+	selfDriving *MainWindow;
 
 	thread automode_thread;
 	thread platformcom_thread;

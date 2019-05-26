@@ -1,14 +1,4 @@
-#include "DataContainer.h"
 #include "SensorStatus.h"
-#include "ComPlatform.h"
-#include "CSerialPort.h"
-
-//#include <Windows.h>
-#include <iostream>
-#include <thread>
-#include <vector>
-#include <iterator>
-#include <math.h>
 
 #define UPDATE_PLATFORM_STATUS 100
 #define UPDATE_SENSOR_CONNECTION 101
@@ -21,6 +11,7 @@ SensorStatus::SensorStatus() {
 
 	dataContainer->setValue_UtoP_AorM(1);
 	
+	MainWindow = selfDriving::getInstance();
 	//SetTimer(hwnd, UPDATE_SENSOR_AUTOSTARTUP, 1000, TimerProc);
 
 	TimerAutostartup = new QTimer(MainWindow);

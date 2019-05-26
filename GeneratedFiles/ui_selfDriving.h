@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'selfDriving.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.2
+** Created by: Qt User Interface Compiler version 5.12.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -40,15 +40,15 @@ public:
     QTextBrowser *textBrowser;
     QComboBox *comboBox;
     QGroupBox *groupBox;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *Btn_mission4;
+    QPushButton *Btn_mission3;
+    QPushButton *Btn_mission0;
+    QPushButton *Btn_mission1;
+    QPushButton *Btn_mission2;
     QGroupBox *groupBox_2;
-    QPushButton *pushButton_11;
-    QPushButton *pushButton_10;
-    QPushButton *pushButton_9;
+    QPushButton *btn_win_lidar;
+    QPushButton *btn_win_gps;
+    QPushButton *btn_win_camera;
     QComboBox *comboBox_2;
     QComboBox *comboBox_3;
     QMenuBar *menuBar;
@@ -95,33 +95,33 @@ public:
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         groupBox->setGeometry(QRect(10, 190, 161, 231));
-        pushButton_5 = new QPushButton(groupBox);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(30, 150, 93, 28));
-        pushButton_4 = new QPushButton(groupBox);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(30, 120, 93, 28));
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(30, 30, 93, 28));
-        pushButton_2 = new QPushButton(groupBox);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(30, 60, 93, 28));
-        pushButton_3 = new QPushButton(groupBox);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(30, 90, 93, 28));
+        Btn_mission4 = new QPushButton(groupBox);
+        Btn_mission4->setObjectName(QString::fromUtf8("Btn_mission4"));
+        Btn_mission4->setGeometry(QRect(30, 150, 93, 28));
+        Btn_mission3 = new QPushButton(groupBox);
+        Btn_mission3->setObjectName(QString::fromUtf8("Btn_mission3"));
+        Btn_mission3->setGeometry(QRect(30, 120, 93, 28));
+        Btn_mission0 = new QPushButton(groupBox);
+        Btn_mission0->setObjectName(QString::fromUtf8("Btn_mission0"));
+        Btn_mission0->setGeometry(QRect(30, 30, 93, 28));
+        Btn_mission1 = new QPushButton(groupBox);
+        Btn_mission1->setObjectName(QString::fromUtf8("Btn_mission1"));
+        Btn_mission1->setGeometry(QRect(30, 60, 93, 28));
+        Btn_mission2 = new QPushButton(groupBox);
+        Btn_mission2->setObjectName(QString::fromUtf8("Btn_mission2"));
+        Btn_mission2->setGeometry(QRect(30, 90, 93, 28));
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setGeometry(QRect(10, 440, 161, 121));
-        pushButton_11 = new QPushButton(groupBox_2);
-        pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
-        pushButton_11->setGeometry(QRect(30, 80, 93, 28));
-        pushButton_10 = new QPushButton(groupBox_2);
-        pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
-        pushButton_10->setGeometry(QRect(30, 50, 93, 28));
-        pushButton_9 = new QPushButton(groupBox_2);
-        pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
-        pushButton_9->setGeometry(QRect(30, 20, 93, 28));
+        btn_win_lidar = new QPushButton(groupBox_2);
+        btn_win_lidar->setObjectName(QString::fromUtf8("btn_win_lidar"));
+        btn_win_lidar->setGeometry(QRect(30, 80, 93, 28));
+        btn_win_gps = new QPushButton(groupBox_2);
+        btn_win_gps->setObjectName(QString::fromUtf8("btn_win_gps"));
+        btn_win_gps->setGeometry(QRect(30, 50, 93, 28));
+        btn_win_camera = new QPushButton(groupBox_2);
+        btn_win_camera->setObjectName(QString::fromUtf8("btn_win_camera"));
+        btn_win_camera->setGeometry(QRect(30, 20, 93, 28));
         comboBox_2 = new QComboBox(centralWidget);
         comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
         comboBox_2->setGeometry(QRect(100, 70, 94, 22));
@@ -154,15 +154,15 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("selfDrivingClass", "\355\224\214\353\236\253\355\217\274 \354\203\201\355\203\234", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("selfDrivingClass", "\355\224\214\353\236\253\355\217\274 \353\241\234\352\267\270", nullptr));
         groupBox->setTitle(QApplication::translate("selfDrivingClass", "Mission Set", nullptr));
-        pushButton_5->setText(QApplication::translate("selfDrivingClass", "Mission5", nullptr));
-        pushButton_4->setText(QApplication::translate("selfDrivingClass", "Mission4", nullptr));
-        pushButton->setText(QApplication::translate("selfDrivingClass", "Mission1", nullptr));
-        pushButton_2->setText(QApplication::translate("selfDrivingClass", "Mission2", nullptr));
-        pushButton_3->setText(QApplication::translate("selfDrivingClass", "Mission3", nullptr));
+        Btn_mission4->setText(QApplication::translate("selfDrivingClass", "Mission4", nullptr));
+        Btn_mission3->setText(QApplication::translate("selfDrivingClass", "Mission3", nullptr));
+        Btn_mission0->setText(QApplication::translate("selfDrivingClass", "Mission0", nullptr));
+        Btn_mission1->setText(QApplication::translate("selfDrivingClass", "Mission1", nullptr));
+        Btn_mission2->setText(QApplication::translate("selfDrivingClass", "Mission2", nullptr));
         groupBox_2->setTitle(QApplication::translate("selfDrivingClass", "Window Set", nullptr));
-        pushButton_11->setText(QApplication::translate("selfDrivingClass", "Lidar Map", nullptr));
-        pushButton_10->setText(QApplication::translate("selfDrivingClass", "GPS map", nullptr));
-        pushButton_9->setText(QApplication::translate("selfDrivingClass", "Camera", nullptr));
+        btn_win_lidar->setText(QApplication::translate("selfDrivingClass", "Lidar Map", nullptr));
+        btn_win_gps->setText(QApplication::translate("selfDrivingClass", "GPS map", nullptr));
+        btn_win_camera->setText(QApplication::translate("selfDrivingClass", "Camera", nullptr));
     } // retranslateUi
 
 };
