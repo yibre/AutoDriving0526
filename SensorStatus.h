@@ -2,6 +2,7 @@
 #include "ComPlatform.h""
 
 #include <thread>
+#include <QTimer>
 
 class SensorStatus {
 private:
@@ -14,6 +15,8 @@ private:
 	thread camera1com_thread;
 	thread gpscom_thread;
 
+
+
 	int sensorCount = 0;
 	int sensorAutoCount = 0;
 	ComPlatform _serial;
@@ -24,7 +27,6 @@ private:
 	bool loopStatusCamera1 = true;
 	bool loopStatusGps = true;
 
-	void updateSensor(UINT_PTR nIDEvent);
 	void updateSensorConnection();
 	void updateSensorStatus();
 	void updateSensorAutostartup();
@@ -34,6 +36,14 @@ private:
 	void comLidar();
 	void comCamera1();
 	void comGps();
+
+	QTimer* TimerAutostartup;
+	QTimer* TimerSensorConnection;
+	QTimer* TimerSensorStatus;
+
+private slots:
+	void updateSensor(UINT_PTR nIDEvent);
+
 };
 
 

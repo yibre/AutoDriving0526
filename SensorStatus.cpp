@@ -4,7 +4,6 @@
 #include "CSerialPort.h"
 
 //#include <Windows.h>
-#include <QTimer>
 #include <iostream>
 #include <thread>
 #include <vector>
@@ -24,7 +23,9 @@ SensorStatus::SensorStatus() {
 	
 	//SetTimer(hwnd, UPDATE_SENSOR_AUTOSTARTUP, 1000, TimerProc);
 
-	QTimer* timer = new QTimer();
+	TimerAutostartup = new QTimer(MainWindow);
+	QTimer::connect(TimerAutostartup, SIGNAL(timeout()), MainWindow, SLOT(updateSensor(UPDATE_SENSOR_AUTOSTARTUP)));
+	TimerAutostartup->start(1000);
 }
 
 void SensorStatus:: updateSensor(UINT_PTR nIDEvent)
@@ -71,7 +72,11 @@ void SensorStatus::updateSensorConnection() {
 	case 5:
 		sensorCount = -1;
 		//KillTimer(hwnd, UPDATE_SENSOR_CONNECTION);
+		delete TimerSensorConnection;
 		//SetTimer(hwnd, UPDATE_SENSOR_STATUS, 1000, NULL);
+		TimerSensorStatus = new QTimer(MainWindow);
+		QTimer::connect(TimerSensorStatus, SIGNAL(timeout()), MainWindow, SLOT(updateSensor(UPDATE_SENSOR_STATUS)));
+		TimerSensorStatus->start(1000);
 	}
 	sensorCount++;
 }
@@ -182,6 +187,9 @@ void SensorStatus::updateSensorAutostartup()
 	case 10:
 		// 센서 연결 타이머 실행
 		//SetTimer(hwnd, UPDATE_SENSOR_CONNECTION, 1000, NULL);
+		TimerSensorConnection = new QTimer(MainWindow);
+		QTimer::connect(TimerSensorConnection, SIGNAL(timeout()), MainWindow, SLOT(updateSensor(UPDATE_SENSOR_CONNECTION)));
+		TimerSensorConnection->start(1000);
 		break;
 
 	case 11:
@@ -215,6 +223,7 @@ void SensorStatus::updateSensorAutostartup()
 
 		sensorAutoCount = -1;
 		//KillTimer(hwnd, UPDATE_SENSOR_AUTOSTARTUP);
+		delete TimerAutostartup;
 		break;
 	}
 	sensorAutoCount++;

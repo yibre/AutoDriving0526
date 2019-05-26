@@ -5,4 +5,6 @@ selfDriving::selfDriving(QWidget *parent)
 {
     ui.setupUi(this);
 
+	MainWindow = this;
+
 }

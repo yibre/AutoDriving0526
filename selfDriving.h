@@ -14,3 +14,5 @@ public:
 private:
     Ui::selfDrivingClass ui;
 };
+
+extern selfDriving * MainWindow;
