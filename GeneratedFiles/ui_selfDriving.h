@@ -104,6 +104,7 @@ public:
         Btn_mission0 = new QPushButton(groupBox);
         Btn_mission0->setObjectName(QString::fromUtf8("Btn_mission0"));
         Btn_mission0->setGeometry(QRect(30, 30, 93, 28));
+        Btn_mission0->setAutoDefault(true);
         Btn_mission1 = new QPushButton(groupBox);
         Btn_mission1->setObjectName(QString::fromUtf8("Btn_mission1"));
         Btn_mission1->setGeometry(QRect(30, 60, 93, 28));
