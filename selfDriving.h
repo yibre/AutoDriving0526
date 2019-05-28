@@ -33,5 +33,6 @@ private:
 
 public slots:
 	void clicked_btn_mission0();
+    void clicked_btn_win_gps();
 };
 

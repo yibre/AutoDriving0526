@@ -9,6 +9,7 @@ selfDriving::selfDriving(QWidget *parent)
     ui.setupUi(this);
 	MainWindow = getInstance();
 	QObject::connect(ui.Btn_mission0, SIGNAL(clicked()), MainWindow, SLOT(clicked_btn_mission0()));
+    // QObject::connect(ui.btn_win_gps, SIGNAL(clicked()), M
 }
 
 
@@ -16,4 +17,9 @@ selfDriving::selfDriving(QWidget *parent)
 void selfDriving::clicked_btn_mission0() {
 	Mission* mission;
 	//mission->doMission0();
+}
+
+void selfDriving::clicked_btn_win_gps()
+{
+
 }
