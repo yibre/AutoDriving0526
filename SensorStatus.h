@@ -1,7 +1,8 @@
 #include "DataContainer.h"
 #include "ComPlatform.h"
-#include "selfDriving.h"
 #include "CSerialPort.h"
+#include "selfDriving.h"
+
 
 #include <thread>
 #include <QTimer>
@@ -11,21 +12,24 @@
 #include <iterator>
 #include <math.h>
 
-class SensorStatus {
+using namespace std;
+
+class SensorStatus 
+{
+public:
+	selfDriving *MainWindow;
+
 
 private:
 	SensorStatus();
 
 	DataContainer *dataContainer;
-	selfDriving *MainWindow;
 
 	thread automode_thread;
 	thread platformcom_thread;
 	thread lidarcom_thread;
 	thread camera1com_thread;
 	thread gpscom_thread;
-
-
 
 	int sensorCount = 0;
 	int sensorAutoCount = 0;

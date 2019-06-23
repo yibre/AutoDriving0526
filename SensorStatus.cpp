@@ -5,17 +5,16 @@
 #define UPDATE_SENSOR_STATUS 102
 #define UPDATE_SENSOR_AUTOSTARTUP 103
 
-
 SensorStatus::SensorStatus() {
 	dataContainer = DataContainer::getInstance();
+//	MainWindow = selfDriving::getInstance();
 
 	dataContainer->setValue_UtoP_AorM(1);
 	
-	MainWindow = selfDriving::getInstance();
 	//SetTimer(hwnd, UPDATE_SENSOR_AUTOSTARTUP, 1000, TimerProc);
 
 	TimerAutostartup = new QTimer(MainWindow);
-	QTimer::connect(TimerAutostartup, SIGNAL(timeout()), MainWindow, SLOT(updateSensor(UPDATE_SENSOR_AUTOSTARTUP)));
+//	QTimer::connect(TimerAutostartup, SIGNAL(timeout()), MainWindow, SLOT(updateSensor(UPDATE_SENSOR_AUTOSTARTUP)));
 	TimerAutostartup->start(1000);
 }
 
