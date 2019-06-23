@@ -1,7 +1,8 @@
 #include "DataContainer.h"
 #include "ComPlatform.h"
-#include "selfDriving.h"
 #include "CSerialPort.h"
+#include "selfDriving.h"
+
 
 #include <thread>
 #include <QTimer>
@@ -11,49 +12,50 @@
 #include <iterator>
 #include <math.h>
 
-class SensorStatus {
+using namespace std;
+
+class SensorStatus
+{
+public:
+    selfDriving *MainWindow;
+
 
 private:
-	SensorStatus();
+    SensorStatus();
 
-	DataContainer *dataContainer;
-	selfDriving *MainWindow;
+    DataContainer *dataContainer;
 
-	thread automode_thread;
-	thread platformcom_thread;
-	thread lidarcom_thread;
-	thread camera1com_thread;
-	thread gpscom_thread;
+    thread automode_thread;
+    thread platformcom_thread;
+    thread lidarcom_thread;
+    thread camera1com_thread;
+    thread gpscom_thread;
 
+    int sensorCount = 0;
+    int sensorAutoCount = 0;
+    ComPlatform _serial;
 
+    bool loopStatusAutomode = true;
+    bool loopStatusPlatform = true;
+    bool loopStatusLidar = true;
+    bool loopStatusCamera1 = true;
+    bool loopStatusGps = true;
 
-	int sensorCount = 0;
-	int sensorAutoCount = 0;
-	ComPlatform _serial;
+    void updateSensorConnection();
+    void updateSensorStatus();
+    void updateSensorAutostartup();
+    void showPlatformControlValue();
 
-	bool loopStatusAutomode = true;
-	bool loopStatusPlatform = true;
-	bool loopStatusLidar = true;
-	bool loopStatusCamera1 = true;
-	bool loopStatusGps = true;
+    void comPlatform();
+    void comLidar();
+    void comCamera1();
+    void comGps();
 
-	void updateSensorConnection();
-	void updateSensorStatus();
-	void updateSensorAutostartup();
-	void showPlatformControlValue();
-
-	void comPlatform();
-	void comLidar();
-	void comCamera1();
-	void comGps();
-
-	QTimer* TimerAutostartup;
-	QTimer* TimerSensorConnection;
-	QTimer* TimerSensorStatus;
+    QTimer* TimerAutostartup;
+    QTimer* TimerSensorConnection;
+    QTimer* TimerSensorStatus;
 
 private slots:
-	void updateSensor(UINT_PTR nIDEvent);
+    void updateSensor(UINT_PTR nIDEvent);
 
 };
-
-

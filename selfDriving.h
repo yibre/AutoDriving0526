@@ -1,32 +1,30 @@
 #pragma once
 #include "ui_selfDriving.h"
 #include "MissionAct.h"
-
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QTimer>
-#include "DataContainer.h"
 
-class selfDriving : public QMainWindow
+
+class selfDriving : public QMainWindow, Mission
 {
     Q_OBJECT
 
 public:
-    
-	static selfDriving* getInstance() {
-		if (!MainWindow) {
-			MainWindow = new selfDriving();
-		}
-		return MainWindow;
-	}
-
+    //static selfDriving* getInstance() {
+    //	if (!MainWindow) {
+    //		MainWindow = new selfDriving();
+    //	}
+    //	return MainWindow;
+    //}
+    selfDriving(QWidget *parent = Q_NULLPTR);
 protected:
-	selfDriving(QWidget *parent = Q_NULLPTR);
     DataContainer *dataContainer;
 
 private:
-	static bool ProgramOn;
-	static selfDriving* MainWindow;
+    //static bool ProgramOn;
+    //static selfDriving* MainWindow;
+    //static selfDriving* MainWindow;
 
     Ui::selfDrivingClass ui;
 
