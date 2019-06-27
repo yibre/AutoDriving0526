@@ -1,6 +1,10 @@
 #pragma once
-#include <mutex>
+// #include <mutex>
 #include <vector>
+#include <QMutex>
+#include <QThread>
+// 현재 0625 DY 이부분 QThread로 만들어보려고 시도하는 중.
+
 
 class DataContainer {
 private:

@@ -5,27 +5,21 @@
 #include <QtWidgets/QPushButton>
 #include <QTimer>
 
+// Thread Á¤ÀÇ¿ë
+#include <QThread>
+#include <QMutex>
+#include <QString>
 
 class selfDriving : public QMainWindow, Mission
 {
     Q_OBJECT
 
 public:
-    //static selfDriving* getInstance() {
-    //	if (!MainWindow) {
-    //		MainWindow = new selfDriving();
-    //	}
-    //	return MainWindow;
-    //}
     selfDriving(QWidget *parent = Q_NULLPTR);
 protected:
     DataContainer *dataContainer;
 
 private:
-    //static bool ProgramOn;
-    //static selfDriving* MainWindow;
-    //static selfDriving* MainWindow;
-
     Ui::selfDrivingClass ui;
 
 public slots:
@@ -34,3 +28,24 @@ public slots:
     void set_ProgessBar_steer(int value);
 };
 
+
+class PlatformComThread :public QThread
+{
+protected:
+    void comPlatform(); // HyeAhnView.cpp ~2621
+};
+
+class LidarComThread :public QThread
+{
+protected:
+};
+
+class CameraComThread :public QThread
+{
+protected:
+};
+
+class AutoModeThread : public QThread
+{
+
+};
