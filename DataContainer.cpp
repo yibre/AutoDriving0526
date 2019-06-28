@@ -6,6 +6,7 @@ using namespace std;
 
 bool DataContainer::instanceFlag = false;
 DataContainer* DataContainer::instance = NULL;
+selfDriving* DataContainer::window = NULL;
 
 DataContainer* DataContainer::getInstance() {
 	if (!instance) {
@@ -14,6 +15,9 @@ DataContainer* DataContainer::getInstance() {
 	}
 	return instance;
 }
+
+selfDriving* DataContainer::getWindow() { return window; }
+void DataContainer::setWindow(selfDriving* w) { window = w; }
 
 //
 // 센서 연결 상태 정보
