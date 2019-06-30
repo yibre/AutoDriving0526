@@ -11,13 +11,13 @@ selfDriving::selfDriving(QWidget *parent)
 
     dataContainer = DataContainer::getInstance();
 
-    for (int i = 0; i < 6; i++) // combobox에 선택지 넣기. 해당 선택지들이 이후 통신용 컴포트에 사용됨.
+    for (int i = 1; i < 5; i++) // combobox에 선택지 넣기. 해당 선택지들이 이후 통신용 컴포트에 사용됨.
     {
         ui.comboBox->addItem("COM " + QString::number(i));
         ui.comboBox_2->addItem("COM " + QString::number(i));
         ui.comboBox_3->addItem("COM " + QString::number(i));
         ui.comboBox_4->addItem("COM " + QString::number(i));
-    }
+    } // combobox 관련: https://www.bogotobogo.com/Qt/Qt5_QComboBox.php
 
 	QObject::connect(ui.Btn_mission0, SIGNAL(clicked()), this, SLOT(clicked_btn_mission0()));
     QObject::connect(ui.horizontalSlider, SIGNAL(valueChanged(int)), this, SLOT(set_ProgessBar_steer(int)));
@@ -34,6 +34,7 @@ void selfDriving::clicked_btn_mission0() {
     Temp = ui.comboBox->currentText();
     std::string utf8_text = Temp.toUtf8().constData(); // QString인 Temp를 cout을 쓰기 위해 UTF-8로 바꾸기 위한 작업
     std::cout << utf8_text << std::endl;
+    // https://stackoverflow.com/questions/4214369/how-to-convert-qstring-to-stdstring
 }
 
 void selfDriving::clicked_btn_win_gps()
