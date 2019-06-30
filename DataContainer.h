@@ -3,6 +3,7 @@
 #include <vector>
 #include <QMutex>
 #include <QThread>
+#include <selfDriving.h>
 // 현재 0625 DY 이부분 QThread로 만들어보려고 시도하는 중.
 
 
@@ -14,6 +15,7 @@ private:
 	static bool instanceFlag;
 
 	static DataContainer* instance;
+	static selfDriving* window;
 
 	//
 	// UPPER to PCU (플랫폼에 보내는 값)
@@ -102,6 +104,8 @@ public:
 
 	//인스턴스 반환
 	static DataContainer* getInstance();
+	static selfDriving* getWindow();
+	void setWindow(selfDriving* w);
 
 	//소멸자
 	virtual ~DataContainer() {
